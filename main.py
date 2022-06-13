@@ -16,12 +16,11 @@ from borb.pdf.pdf import PDF
 
 months = ['ЯНВАРЬ', 'ФЕВРАЛЬ', 'МАРТ', 'АПРЕЛЬ', 'МАЙ', 'ИЮНЬ', 'ИЮЛЬ', 'АВГУСТ', 'СЕНТЯБРЬ', 'ОКТЯБРЬ', 'НОЯБРЬ',
           'ДЕКАБРЬ']
-try:
-    with open('names.txt', encoding='utf-8') as inf:  # чтение файла и копирование имен в строку nameList
-        nameList = inf.readlines()
-        nameList = [line.rstrip() for line in nameList]
-except IOError as e:
-    print('Файл names.txt не найден')
+
+with open('names.txt', encoding='utf-8') as inf:  # чтение файла и копирование имен в строку nameList
+    nameList = inf.readlines()
+    nameList = [line.rstrip() for line in nameList]
+
 
 def get_date():
     print('Введите месяц и год\nНапример: 11.2019')
